@@ -1,0 +1,26 @@
+
+.post-card {
+  border: 1px solid var(--border-color);
+  padding: 2em 1.5em;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
+  grid-gap: 1em;
+
+}
+
+.post-image {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.post-tag {
+  --attention-color: red;
+  color: var(--attention-color);
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}

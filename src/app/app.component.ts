@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MyServiceService} from '../services/my-service.service';
+import {PostCardComponent} from './common-ui/post-card/post-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PostCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
