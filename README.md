@@ -2,58 +2,143 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
-## Development server
 
-To start a local development server, run:
+## Работа с git
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+#### 1. Инициализация нового репозитория кода
 
 ```bash
-ng generate component component-name
+git init
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+#### 2. Создание файла исключений `.gitignore`
+```bash
+touch .gitignore
+```
+Внутри файла мы добавляем директории и файлы которые мы хотим исключить из индексации:
+
+```gitignore
+#Ignored directories
+.idea/
+.vc/
+node_modules/
+
+#Ignored files
+.DS_Store
+Thumbs.db
+dektop.ini
+package-lock.json
+```
+
+#### 3. Проверка статуса измений состояния файлов проекта
 
 ```bash
-ng generate --help
+git status
 ```
 
-## Building
+#### 4. Индексация изменений
+Добавить в Staging Area (переиндексировать все файлы, кроме конфигурационных)
+```bash
+git add *
+```
 
-To build the project run:
+Добавить в Staging Area (переиндексировать все файлы + файлы конфигурационные)
+```bash
+git add .
+```
+
+Добавить в staging для индексации новые файлы или модифицированные
+```bash
+git add --all
+```
+
+Добавить несколько файлов:
+```bash
+git add *.txt
+```
+
+Добавить несколько файлов
+```bash
+git add index.html css/style.css
+```
 
 ```bash
-ng build
+git add docs/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+удалить из индексации файл, но оставить в рабочей директории
+```bash
+git rm --cached 111.txt
+```
 
-## Running unit tests
+удалить из индексации файл, и из рабочей директории
+```bash
+git rm -f 111.txt
+```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+#### 5. Фиксация изменений
 
 ```bash
-ng test
+git commit -m "сообщение о том, что сделано в коммите"
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+#### 6. Просмотр истории
 
 ```bash
-ng e2e
+git log
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+```bash
+git log --oneline
+```
 
-## Additional Resources
+```bash
+git log --graph
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git log --decorate
+```
+
+```bash
+git log --graph --decorate
+```
+
+#### 6. Просмотр разницы изменений
+
+```bash
+git diff
+```
+
+```bash
+git diff --staged
+```
+
+#### 7. Отмена изменений в файле, которые появились с момента последней фиксации изменений
+
+```bash
+git checkout index.html
+```
+
+#### 8. Отмена последнего коммита
+
+Отменить последний коммит, но оставить изменения в staging files
+```bash
+git reset --soft HEAD\^
+```
+
+Отменить последний коммит, и все изменения (осторожно!)
+```bash
+git reset --hard HEAD\^
+```
+
+Отменить 2 последних коммита, и все изменения (осторожно!)
+```bash
+git reset --hard HEAD\^\^
+```
+
+#### 9. Редактирование информации о коммите
+```bash
+git commit --amend -m "добавление технической документации"
+```
+
