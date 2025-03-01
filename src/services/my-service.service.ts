@@ -8,7 +8,7 @@ export class MyServiceService {
   constructor() {}
 
     getMyName(): string {
-      return "Александр  ";
+      return "Александр  fekfnwdkjfwdkfjwdwj";
     }
 
 }
