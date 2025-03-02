@@ -11,8 +11,6 @@ COPY . /app
 
 RUN npm run build:ssr
 
-RUN npm run build:ssr
-
 FROM node:18-alpine
 
 WORKDIR /app
