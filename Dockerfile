@@ -34,4 +34,4 @@ RUN npm install --production
 EXPOSE 4000
 
 # Запускаем SSR-сервер
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "serve:ssr"]
