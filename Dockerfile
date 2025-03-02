@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Собираем Angular приложение (включая SSR)
-RUN npm run build:ssr
+RUN npm run build
 
 # Используем отдельный этап для запуска приложения
 FROM node:18-alpine
@@ -34,4 +34,4 @@ RUN npm install --production
 EXPOSE 4000
 
 # Запускаем SSR-сервер
-CMD ["npm", "run", "serve:ssr"]
+CMD ["npm", "run", "serve"]
