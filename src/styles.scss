@@ -1,11 +1,21 @@
 :root {
   --main-background-color: #fafafa;
+  --main-blue-color: #212b47;
+  --main-color: #ea6019;
+  --foreground: #171717;
+  --white-color: #fff;
+
   --post-card-background-color: #fafafa;
   --border-color: grey;
+  --border-shodow-color: rgba(128, 128, 128, .4);
   --attention-color: red;
+
+
+
+
+
+  background: var(--main-background-color);
+
 }
 
-body {
-  background: var(--main-background-color);
-}
 

@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+app-footer {
+  flex: 0 0 auto; /* Фиксированная высота */
+}
+
+footer {
+  display: flex;
+  flex: 0 0 auto; /* Фиксированная высота */
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+

@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  justify-content: space-around;
+  flex: 0 0 auto; /* Фиксированная высота */
+  background-color: var(--main-blue-color);
+  padding: .3em;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto; /* Фиксированная высота */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.middle-header {
+  color: var(--white-color);
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: var(--main-blue-color);
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+
+}
